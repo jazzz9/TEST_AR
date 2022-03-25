@@ -9,8 +9,8 @@ function staticLoadPlaces() {
         {
             name: 'MyModel',
             location: {
-                lat: 43.659806979062786, //My Location
-                lng: -79.38317091474575, 
+                lat: 43.659877, //My Location
+                lng: -79.383139, 
             }
         },
     ];
