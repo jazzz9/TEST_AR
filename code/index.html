@@ -11,27 +11,20 @@
 		<!-- one of these is enough; nft is for images,  the other markers. both handle location-based-->	
 		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+		<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+
 		<!-- -->
 	</head>
 
 	<body style="margin: 0; overflow: hidden;">
-		
 		<a-scene 
 		vr-mode-ui="enabled: false"
         	arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
         	renderer="antialias: true; alpha: true">
-			
+		
 		<!-- we dont have camera, assets, items, etc. in here yet -->
-		<!--a-camera gps-camera rotation-reader></a-camera-->
-		<a-box color="yellow" gps-entity-place="latitude: <43.659877>; longitude: <-79.383139>"/>
-		<a-camera id='camera1'  arjs-look-controls='smoothingFactor: 0.1' gps-camera='gpsMinDistance: 5' rotation-reader> </a-camera>
-		<!-- Include this script -->
-		<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-
-		<!-- Then we can add the following to the a-scene -->
-		<a-camera gps-camera='simulateLatitude: 43.659806979062786; simulateLongitude: -79.38317091474575' rotation-reader></a-camera>
-
-		<a-text value="This will always face the user." look-at="[gps-camera]" scale="75 75 75" gps-entity-place="latitude: 43.659806979062786; longitude: -79.38317091474575;"></a-text>		
+		<a-camera gps-camera='simulateLatitude: 43.659877; simulateLongitude: -79.383139' rotation-reader></a-camera>
+		<a-text value="This will always face the user." look-at="[gps-camera]" scale="75 75 75" gps-entity-place="latitude: 51.0491; longitude: -0.723;"></a-text>
 		</a-scene>
 	</body>
 </html>
